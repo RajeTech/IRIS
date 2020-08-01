@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:onClick="Atualizar" android:title="Editar" />
+    <item android:title="Excluir" android:onClick="Excluir" />
+    <item android:title="Inf. p/ Relatório Semanal" android:onClick="InfoRelatorioSemanal"/>
+    <item android:title="Sincronizar" android:onClick="Sincronizar"/>
+    <item android:onClick="RelatorioIndividualCVLI" android:title="Gerar Release" />
+    <item android:title="Gerar Release em PDF" android:onClick="GerarReleasePDF" />
+</menu>

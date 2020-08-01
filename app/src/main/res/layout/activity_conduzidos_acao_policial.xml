@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBacground"
+    tools:context=".ConduzidosAcaoPolicialActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView4"
+        android:layout_width="match_parent"
+        android:layout_height="486dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <Button
+                android:id="@+id/btnNomeConduzidoAcaoPolcial"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorBotao"
+                android:text="Nome do Conduzido"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/edtNomeConduzidoAcaoPolicial"
+                android:layout_width="0dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorEditext"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:visibility="invisible"
+                android:imeOptions="actionNext"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnNomeConduzidoAcaoPolcial" />
+
+            <Button
+                android:id="@+id/btnNovoConduzidoAcaoPolicial"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="44dp"
+                android:layout_marginLeft="44dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/colorBotao"
+                android:text="Incluir Novo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtComarcaConduzidoAcaoPolicial" />
+
+            <Button
+                android:id="@+id/btnIdadeConduzidoAcaoPolicial"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorBotao"
+                android:text="Idade do Conduzido"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtNomeConduzidoAcaoPolicial" />
+
+            <TextView
+                android:id="@+id/tvIdadeConduzidoAcaoPolicial"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Idade:"
+                android:textStyle="bold"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnIdadeConduzidoAcaoPolicial" />
+
+            <TextView
+                android:id="@+id/tvTipoProcedimentoRelAcaoPolicial"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:text="Tipo de procedimento relacionado:"
+                android:textStyle="bold"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.89"
+                app:layout_constraintStart_toEndOf="@+id/tvIdadeConduzidoAcaoPolicial"
+                app:layout_constraintTop_toBottomOf="@+id/btnIdadeConduzidoAcaoPolicial" />
+
+            <EditText
+                android:id="@+id/edtIdadeConduzidoAcaoPolicial"
+                android:layout_width="57dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/colorEditext"
+                android:ems="10"
+                android:inputType="number"
+                android:visibility="gone"
+                android:imeOptions="actionNext"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvIdadeConduzidoAcaoPolicial" />
+
+            <Spinner
+                android:id="@+id/spTipoProcedimentoRelAcaoPolicial"
+                android:layout_width="235dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorSpinner"
+                android:visibility="gone"
+                android:imeOptions="actionNext"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/edtIdadeConduzidoAcaoPolicial"
+                app:layout_constraintTop_toBottomOf="@+id/tvTipoProcedimentoRelAcaoPolicial" />
+
+            <TextView
+                android:id="@+id/tvAtoInfracionalAcaoPolicial"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Ato Infracional:"
+                android:textStyle="bold"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtIdadeConduzidoAcaoPolicial" />
+
+            <EditText
+                android:id="@+id/edtAtoInfracionalAcaoPolicial"
+                android:layout_width="0dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorEditext"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:visibility="gone"
+                android:imeOptions="actionNext"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvAtoInfracionalAcaoPolicial" />
+
+            <Button
+                android:id="@+id/btnTipoConducaoConduzidoAcaoPolicial"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorBotao"
+                android:text="Tipo de Condução"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtAtoInfracionalAcaoPolicial" />
+
+            <Spinner
+                android:id="@+id/spTipoConducaoConduzidoAcaoPolicial"
+                android:layout_width="0dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorSpinner"
+                android:visibility="invisible"
+                android:imeOptions="actionNext"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnTipoConducaoConduzidoAcaoPolicial" />
+
+            <TextView
+                android:id="@+id/tvNomeJuizConduzidoAcaoPolicial"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Nome do Juiz:"
+                android:textStyle="bold"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spTipoConducaoConduzidoAcaoPolicial" />
+
+            <TextView
+                android:id="@+id/tvComarcaConduzidoAcaoPolicial"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Comarca:"
+                android:textStyle="bold"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtNomeJuizConducaoAcaoPolicial" />
+
+            <EditText
+                android:id="@+id/edtNomeJuizConducaoAcaoPolicial"
+                android:layout_width="0dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorEditext"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:visibility="gone"
+                android:imeOptions="actionNext"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvNomeJuizConduzidoAcaoPolicial" />
+
+            <EditText
+                android:id="@+id/edtComarcaConduzidoAcaoPolicial"
+                android:layout_width="0dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorEditext"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:visibility="gone"
+                android:imeOptions="actionNext"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvComarcaConduzidoAcaoPolicial" />
+
+            <Button
+                android:id="@+id/btnFinalizarConduzidoAcaoPolicial"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorBotao"
+                android:text="Concluir"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btnNovoConduzidoAcaoPolicial"
+                app:layout_constraintTop_toBottomOf="@+id/edtComarcaConduzidoAcaoPolicial" />
+
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

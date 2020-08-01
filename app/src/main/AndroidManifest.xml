@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.iris.ramilton.iris">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:windowSoftInputMode="adjustPan"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".DaVistoriaActivity"></activity>
+        <activity android:name=".FotoEtiquetaSegurancaActivity" />
+        <activity android:name=".FotoVidroActivity" />
+        <activity android:name=".FotoMotorActivity" />
+        <activity android:name=".FotoChassiActivity" />
+        <activity android:name=".FotoTetoActivity" />
+        <activity android:name=".FotoLateralEsquerdaActivity" />
+        <activity android:name=".FotoLateralDireitaActivity" />
+        <activity android:name=".FotoFundoActivity" />
+        <activity android:name=".FotoFrenteActivity" />
+        <activity android:name=".DadosVistoriaActivity" />
+        <activity android:name=".VistoriaActivity" />
+        <activity android:name=".RelatorioAcaoPolicialPDF" />
+        <activity android:name=".RelatorioIndividualAcaoPolicialactivity" />
+        <activity android:name=".DoProcedimentoAcaoPolicial" />
+        <activity android:name=".AtualizarConduzidoAcaoPolicial" />
+        <activity android:name=".RelatorioIndividualPDF" />
+        <activity android:name=".sincronizacao" />
+        <activity android:name=".RelatorioRispMetropolitana" />
+        <activity android:name=".RelatorioRispSul" />
+        <activity android:name=".RelatorioRispSudoeste" />
+        <activity android:name=".RelatorioRispOeste" />
+        <activity android:name=".RelatorioRispNorte" />
+        <activity android:name=".RelatorioRispLeste" />
+        <activity android:name=".RelatorioRispChapada" />
+        <activity android:name=".RelatorioRispCentral" />
+        <activity android:name=".RelatorioRispBPS" />
+        <activity android:name=".RelatorioRispAtlantico" />
+        <activity android:name=".RelatorioEstado" />
+        <activity android:name=".RelatorioCapital" />
+        <activity android:name=".RelatorioRisp" />
+        <activity android:name=".RelatorioDepom" />
+        <activity android:name=".RelatorioDepin" />
+        <activity
+            android:name=".TiposRelatoriosActivity"
+            android:label="@string/title_activity_tipos_relatorios"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".PrincipalActivity" />
+        <activity android:name=".CvliActivity" />
+        <activity android:name=".CadastroCvliActivity" />
+        <activity android:name=".FatoActivity" />
+        <activity android:name=".SilcActivity" />
+        <activity android:name=".VitimaActivity" />
+        <activity android:name=".AutoriaActivity" />
+        <activity android:name=".ProvidenciasActivity" />
+        <activity android:name=".IncluirEqPresLocalActivity" />
+        <activity android:name=".IncluirEquipeLevantamentoActivity" />
+        <activity android:name=".IncluirEquipePeritoActivity" />
+        <activity android:name=".FaseJudicialActivity" />
+        <activity android:name=".AutomovelCrimeFatoActivity" />
+        <activity android:name=".InstrumentoCrimeFatoActivity" />
+        <activity android:name=".ResumoFatosActivity" />
+        <activity android:name=".IncluirObjetosApreendidosActivity" />
+        <activity android:name=".AtualizarVitimaActivity" />
+        <activity android:name=".AtualizarAutoriaActivity" />
+        <activity android:name=".ConsultasActivity" />
+        <activity android:name=".RelatorioCVLIActivity" />
+        <activity android:name=".RelatorioGeradoCVLIActivity" />
+        <activity android:name=".SenhaActivity" />
+        <activity android:name=".RelatorioIndividualCVLIActivity" />
+        <activity android:name=".InformacoesActivity" />
+        <activity android:name=".CadastroAcaoPolicialActivity" />
+        <activity android:name=".AcaoPolicialActivity" />
+        <activity android:name=".DaAcaoPolicialActivity" />
+        <activity android:name=".DaEquipeEnvolvidaActivity" />
+        <activity android:name=".ObjetosApeendidosAcaoPolicialActivity" />
+        <activity android:name=".ArmasAcaoPolicialActivity" />
+        <activity android:name=".DrogasAcaoPolicialActivity" />
+        <activity android:name=".CarrosAcaoPolicialActivity" />
+        <activity android:name=".ConduzidosAcaoPolicialActivity" />
+        <activity android:name=".GuiasProvidenciasActivity" />
+        <activity android:name=".AturalizaResFatoActivity" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/providers_path" />
+        </provider>
+    </application>
+
+</manifest>

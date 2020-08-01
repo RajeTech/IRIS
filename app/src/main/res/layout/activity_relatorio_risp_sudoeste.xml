@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RelatorioRispSudoeste">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        android:clickable="true"
+        android:focusableInTouchMode="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ProgressBar
+                android:id="@+id/carregando"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <RadioGroup
+                android:id="@+id/rgTipoRelatorioCVLIEstadoSudoeste"
+                android:layout_width="0dp"
+                android:layout_height="33dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewEstadoSudoeste">
+
+                <RadioButton
+                    android:id="@+id/rbRelatorioSemanalSudoeste"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:text="Semanal" />
+
+                <RadioButton
+                    android:id="@+id/rbRelatorioEstatisticoSudoeste"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Estatítico" />
+
+                <RadioButton
+                    android:id="@+id/rbCustomizadoCVLISudoeste"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Customizado" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textViewEstadoSudoeste"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="30dp"
+                android:text="Escolha o tipo de relatório a ser gerado:"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/clRelatorioSemanalEstadoSudoeste"
+                android:layout_width="304dp"
+                android:layout_height="345dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rgTipoRelatorioCVLIEstadoSudoeste">
+
+                <TextView
+                    android:id="@+id/tvEscolhaTipoRelatorioEstadoSudoeste"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Relatório Semanal Detalhado:"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/clRelatorioSemanalEstadoSudoeste" />
+
+                <Spinner
+                    android:id="@+id/spTipoRelatorioSemanalEstadoSudoeste"
+                    android:layout_width="0dp"
+                    android:layout_height="44dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@color/colorSpinner"
+                    android:imeOptions="actionNext"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvEscolhaTipoRelatorioEstadoSudoeste" />
+
+                <ListView
+                    android:id="@+id/lvResFatoSudoeste"
+                    android:layout_width="0dp"
+                    android:layout_height="211dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/spTipoRelatorioSemanalEstadoSudoeste" />
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/clRelatorioEstatisticoSudoeste"
+                android:layout_width="304dp"
+                android:layout_height="190dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rgTipoRelatorioCVLIEstadoSudoeste">
+
+                <TextView
+                    android:id="@+id/tvPeriodoRelatorioCVLIEstadoSudoeste"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="Relatório Estatístico Comprativo:"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.084"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tV16DCapitalEstadoSudoeste"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Especifíque o nome do relatório"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvPeriodoRelatorioCVLIEstadoSudoeste" />
+
+                <EditText
+                    android:id="@+id/edtNomeRelatorioEstatisticoEstadoSudoeste"
+                    android:layout_width="0dp"
+                    android:layout_height="46dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@color/colorEditext"
+                    android:ems="10"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPersonName"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tV16DCapitalEstadoSudoeste" />
+
+                <TextView
+                    android:id="@+id/textView18CapitalEstadoSudoeste"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Especifique um período"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edtNomeRelatorioEstatisticoEstadoSudoeste" />
+
+                <EditText
+                    android:id="@+id/edtDtInicialCVLIEstadoSudoeste"
+                    android:layout_width="130dp"
+                    android:layout_height="46dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@color/colorEditext"
+                    android:ems="10"
+                    android:imeOptions="actionNext"
+                    android:inputType="date"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView18CapitalEstadoSudoeste" />
+
+                <EditText
+                    android:id="@+id/edtDtFinalCVLISudoeste"
+                    android:layout_width="128dp"
+                    android:layout_height="46dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@color/colorEditext"
+                    android:ems="10"
+                    android:imeOptions="actionNext"
+                    android:inputType="date"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tvAteCVLIEstadoSudoeste"
+                    app:layout_constraintTop_toBottomOf="@+id/textView18CapitalEstadoSudoeste" />
+
+                <TextView
+                    android:id="@+id/tvAteCVLIEstadoSudoeste"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="20dp"
+                    android:text="a"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/edtDtInicialCVLIEstadoSudoeste"
+                    app:layout_constraintTop_toBottomOf="@+id/textView18CapitalEstadoSudoeste" />
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/clCustomizadoCVLISudoeste"
+                android:layout_width="304dp"
+                android:layout_height="589dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/clRelatorioSemanalEstadoSudoeste">
+
+                <TextView
+                    android:id="@+id/textView16Sudoeste"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Relatório Customizado:"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/edtDataInicioCusCvliSudoeste"
+                    android:layout_width="128dp"
+                    android:layout_height="42dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/colorEditext"
+                    android:ems="10"
+                    android:inputType="date"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView16Sudoeste" />
+
+                <TextView
+                    android:id="@+id/textView18Sudoeste"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="16dp"
+                    android:text="a"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/edtDataInicioCusCvliSudoeste"
+                    app:layout_constraintTop_toBottomOf="@+id/textView16Sudoeste" />
+
+                <EditText
+                    android:id="@+id/edtDataFinalCusCVLISudoeste"
+                    android:layout_width="131dp"
+                    android:layout_height="42dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@color/colorEditext"
+                    android:ems="10"
+                    android:inputType="date"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/textView18Sudoeste"
+                    app:layout_constraintTop_toBottomOf="@+id/textView16Sudoeste" />
+
+                <TextView
+                    android:id="@+id/textView19Sudoeste"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Opções:"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edtDataInicioCusCvliSudoeste" />
+
+                <CheckBox
+                    android:id="@+id/ckbNaturezaCusCVLISudoeste"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="4dp"
+                    android:text="Natureza"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView19Sudoeste" />
+
+                <CheckBox
+                    android:id="@+id/ckbMotivacaoCusCVLISudoeste"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="4dp"
+                    android:text="Motivação"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ckbNaturezaCusCVLISudoeste" />
+
+                <CheckBox
+                    android:id="@+id/ckbDistriCidCusCVLISudoeste"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="4dp"
+                    android:text="Distribuição Por Cidade"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ckbDistBairCusCVLISudoeste" />
+
+                <CheckBox
+                    android:id="@+id/ckbDistBairCusCVLISudoeste"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="4dp"
+                    android:text="Distribuição Por Bairro"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ckbCompAnualCustCVLISudoeste" />
+
+                <CheckBox
+                    android:id="@+id/ckbDetalhamentoCustCVLISudoeste"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="4dp"
+                    android:text="Detalhamento Por Local"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ckbMotivacaoCusCVLISudoeste" />
+
+                <CheckBox
+                    android:id="@+id/ckbCompAnualCustCVLISudoeste"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="4dp"
+                    android:text="Comparativo Anual"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ckbDetalhamentoCustCVLISudoeste" />
+
+                <CheckBox
+                    android:id="@+id/ckbMeioEmpregadoCusCVLISudoeste"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="156dp"
+                    android:layout_marginRight="156dp"
+                    android:text="Meio Empregado"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ckbIncSemaCusCVLISudoeste" />
+
+                <CheckBox
+                    android:id="@+id/ckbElucidacaoCusCVLISudoeste"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="Elucidação"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ckbMeioEmpregadoCusCVLISudoeste" />
+
+                <CheckBox
+                    android:id="@+id/ckbZoneamentoCusCVLISudoeste"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="Zoneamento"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ckbElucidacaoCusCVLISudoeste" />
+
+                <CheckBox
+                    android:id="@+id/ckbCompPeriCusCVLISudoeste"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="Comparativo Periódico"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ckbZoneamentoCusCVLISudoeste" />
+
+                <CheckBox
+                    android:id="@+id/ckbCompMesCusCVLISudoeste"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="Comparativo Mensal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ckbCompPeriCusCVLISudoeste" />
+
+                <CheckBox
+                    android:id="@+id/ckbIncSemaCusCVLISudoeste"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="4dp"
+                    android:text="Incidência Dia Semana"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ckbDistriCidCusCVLISudoeste" />
+
+                <CheckBox
+                    android:id="@+id/ckbIncidenciaHorarioCVLISudoeste"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="Incidência Por Horário"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ckbCompMesCusCVLISudoeste" />
+
+                <CheckBox
+                    android:id="@+id/cbkRelacaoVitimaAISPSudoeste"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="Relação de Vítimas"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ckbIncidenciaHorarioCVLISudoeste" />
+
+            </android.support.constraint.ConstraintLayout>
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnGerarRelatorioCVLISudoeste"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@color/colorBotao"
+        android:text="Gerar Relatório Semanal - RISP SUDOESTE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

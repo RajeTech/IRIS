@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBacground"
+    tools:context=".DadosVistoriaActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="486dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        android:clickable="true"
+        android:focusableInTouchMode="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <Button
+                android:id="@+id/btnUnidadeBOVistoria"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorBotao"
+                android:text="Unidade BO"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTituloDaApresentacaoVistoria"
+                tools:ignore="MissingConstraints" />
+
+            <Spinner
+                android:id="@+id/spUnidadeBOVistoria"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorSpinner"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnUnidadeBOVistoria" />
+
+            <Button
+                android:id="@+id/btnDataApresentacaoVistoria"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorBotao"
+                android:text="Data da Apresentação"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spUnidadeBOVistoria" />
+
+            <EditText
+                android:id="@+id/edtDataApresentacaoVistoria"
+                android:layout_width="0dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorEditext"
+                android:ems="10"
+                android:inputType="date"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnDataApresentacaoVistoria" />
+
+            <Button
+                android:id="@+id/btnTipoVeiculoVistoria"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorBotao"
+                android:text="@string/tipo"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtDataApresentacaoVistoria" />
+
+            <Spinner
+                android:id="@+id/spTipoVeiculoVistoria"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorSpinner"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnTipoVeiculoVistoria" />
+
+            <Button
+                android:id="@+id/btnMarcaVeiculoVistoria"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorBotao"
+                android:text="Marca"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spTipoVeiculoVistoria" />
+
+            <Spinner
+                android:id="@+id/spMarcaVeiculoVistoria"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorSpinner"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnMarcaVeiculoVistoria" />
+
+            <Button
+                android:id="@+id/btnModeloVeiculoVistoria"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorBotao"
+                android:text="Modelo"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spMarcaVeiculoVistoria" />
+
+            <EditText
+                android:id="@+id/edtModeloVeiculoVistoria"
+                android:layout_width="0dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorEditext"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnModeloVeiculoVistoria" />
+
+            <Button
+                android:id="@+id/btnCorVeiculoVistoria"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorBotao"
+                android:text="Cor"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtModeloVeiculoVistoria" />
+
+            <EditText
+                android:id="@+id/edtCorVeiculoVistoria"
+                android:layout_width="0dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorEditext"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnCorVeiculoVistoria" />
+
+            <Button
+                android:id="@+id/btnAnoModeloVeiculoVistoria"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorBotao"
+                android:text="Ano Modelo"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtCorVeiculoVistoria" />
+
+            <EditText
+                android:id="@+id/edtAnoModeloVeiculoVistoria"
+                android:layout_width="0dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorEditext"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnAnoModeloVeiculoVistoria" />
+
+            <Button
+                android:id="@+id/btnPlacaVeiculoVistoriado"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorBotao"
+                android:text="Placa"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtAnoModeloVeiculoVistoria" />
+
+            <CheckBox
+                android:id="@+id/cbPlacaAusendeVeiculoVistoriado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="10dp"
+                android:text="Placa Ausente"
+                android:visibility="invisible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnPlacaVeiculoVistoriado" />
+
+            <EditText
+                android:id="@+id/edtPlacaVeiculoVistoriado"
+                android:layout_width="162dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorEditext"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/cbPlacaAusendeVeiculoVistoriado"
+                app:layout_constraintTop_toBottomOf="@+id/btnPlacaVeiculoVistoriado" />
+
+            <TextView
+                android:id="@+id/tvMunicipioEstadoVistoria"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="10dp"
+                android:text="Municipio/Estado"
+                android:textStyle="bold"
+                android:visibility="invisible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cbPlacaAusendeVeiculoVistoriado" />
+
+            <EditText
+                android:id="@+id/edtMunicipioVeiculoVistoria"
+                android:layout_width="190dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/colorEditext"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:visibility="invisible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvMunicipioEstadoVistoria" />
+
+            <Spinner
+                android:id="@+id/spEstadoVeiculoVistoria"
+                android:layout_width="94dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorSpinner"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/edtMunicipioVeiculoVistoria"
+                app:layout_constraintTop_toBottomOf="@+id/tvMunicipioEstadoVistoria" />
+
+            <Button
+                android:id="@+id/btnChassiVeiculoVistoria"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorBotao"
+                android:text="Chassi"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtMunicipioVeiculoVistoria" />
+
+            <CheckBox
+                android:id="@+id/cbChassiVeiculoVistoria"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:text="Chassi numeração suprimida"
+                android:visibility="invisible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnChassiVeiculoVistoria" />
+
+            <EditText
+                android:id="@+id/edtChassiVeiculoVistoria"
+                android:layout_width="0dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorEditext"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cbChassiVeiculoVistoria" />
+
+            <Button
+                android:id="@+id/btnProximaEtapa"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/colorBotao"
+                android:text="Da Vistoria"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtChassiVeiculoVistoria" />
+
+            <TextView
+                android:id="@+id/tvTituloDaApresentacaoVistoria"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:text="Da Apresentação"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

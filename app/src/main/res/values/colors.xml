@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2a2768</color>
+    <color name="colorPrimaryDark">#d7d9e6</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorBacground">#dfdbf0</color>
+    <color name="colorBotao">#ededed</color>
+    <color name="colorBotaoTexto">#ffffff</color>
+    <color name="colorEditext">#ffffff</color>
+    <color name="colorSpinner">#ffffff</color>
+    <color name="colorBotaoClicado">#add9ab</color>
+</resources>

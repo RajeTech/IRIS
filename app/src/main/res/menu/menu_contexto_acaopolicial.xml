@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Editar" android:onClick="AtualizarAcaoPolicial" />
+    <item android:title="Excluir" android:onClick="ExcluirAcaoPolicial"/>
+    <item android:title="Sincronizar" android:onClick="SincronizarAcaoPolicial"/>
+    <item android:title="Gerar Release" android:onClick="RelatorioIndividualAcaoPolicial" />
+    <item android:title="Gerar Relatório" android:onClick="RelatorioIndividualAcaoPolicialPDF" />
+
+</menu>

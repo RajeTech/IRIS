@@ -1,0 +1,762 @@
+<resources>
+    <string name="app_name">IRIS</string>
+    <string name="iris">IRIS</string>
+    <string name="title_activity_cvliprincipal">cvliprincipal</string>
+    <string name="title_activity_menu_cvli">MenuCvli</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_cvl__principal">Cvl_Principal</string>
+    //itens do menu
+    <string name="salvar">Concluir</string>
+    <string name="pesquisa">Pesquisar</string>
+    <string name="incluir">Incluir</string>
+    <string name="retornar">Retornar</string>
+    <string name="vitima">Vítima</string>
+    <string name="testemunha">Testemunha</string>
+    <string name="investigado">Investigado</string>
+    <string name="relatorio">Relatório</string>
+    <string name="do_fato">Do Fato</string>
+    <string name="do_silc">DO LEVANTAMENTO CADAVÉRICO</string>
+    <string name="da_vitima">DA VÍTIMA</string>
+    <string name="da_autoria">DA AUTORIA</string>
+    <string name="das_providencias">DAS PROVIDÊNCIAS</string>
+    <string name="numero">Número</string>
+    <string name="bairro">Bairro</string>
+    <string name="distrito_vilarejo_povoado">Distrito/Vilarejo/Povoado</string>
+    <string name="detalhamento_outro">Detalhamento Outro</string>
+    <string name="municipio">Município</string>
+    <string name="zona">Zona</string>
+    <string name="detalhamento_do_local">Detalhamento do Local</string>
+    <string name="logradouro">Logradouro</string>
+    <string name="refer_ncia_do_local">Referência do Local</string>
+    <string name="nome">Nome</string>
+    <string name="idade">Idade</string>
+    <string name="cpf">CPF</string>
+    <string name="rg">RG</string>
+    <string name="orgao_exp">Orgão Exp</string>
+    <string name="data_exp">Data Exp</string>
+    <string name="habilitacao_cnh">Habilitação(CNH)</string>
+    <string name="categoria">Categoria</string>
+    <string name="data_de_validade">Data de Validade</string>
+    <string name="data_da_prisao">Data da Prisão</string>
+    <string name="horario_da_prisao">Horário da Prisão</string>
+    <string name="local_da_prisao">Local da Prisão</string>
+
+    //itens para spinner natureza
+
+    <string-array name="natureza">
+        <item>Selecione...</item>
+        <item>Homicídio(s)</item>
+        <item>Feminicídio(s)</item>
+        <item>Latrocínio(s)</item>
+        <item>Lesão Corporal Seguida de Morte</item>
+        <item>Morte(s) a Esclarecer</item>
+    </string-array>
+
+    <string-array name="OutraInstituicaoAcaoPolicial">
+        <item>Selecione...</item>
+        <item>Polícia Militar/ Ordinário</item>
+        <item>Polícia Militar/ Especializada</item>
+        <item>Polícia Rodoviária Federal</item>
+        <item>Polícia Federal</item>
+        <item>Guarda Municipal</item>
+        <item>IBAMA</item>
+        <item>Ministério Público</item>
+        <item>Outras Instituições</item>
+    </string-array>
+
+    <string-array name="Municipio">
+        <item>Selecione...</item>
+        <item>Eunápolis</item>
+        <item>Porto Seguro</item>
+        <item>Itabela</item>
+        <item>Santa Cruz Cabrália</item>
+        <item>Guaratinga</item>
+        <item>Belmonte</item>
+        <item>Itagimirim</item>
+        <item>Itabela</item>
+    </string-array>
+
+    //itens para spinner rua localização corpo
+    <string-array name="Logradouro">
+        <item>Selecione...</item>
+        <item>Rua</item>
+        <item>Avenida</item>
+        <item>Estrada</item>
+        <item>Alameda</item>
+        <item>Caminho</item>
+        <item>Cemiterio</item>
+        <item>Feira</item>
+        <item>Rodovia</item>
+        <item>Parque</item>
+        <item>Travessa</item>
+        <item>Largo</item>
+        <item>Jardim</item>
+        <item>Praça</item>
+        <item>Quadra</item>
+        <item>Fazenda</item>
+        <item>Mata</item>
+        <item>Plantio Agricula</item>
+        <item>Pasto</item>
+        <item>Praia</item>
+        <item>Estabelecimento Prisional</item>
+        <item>Rio</item>
+        <item>Aldeia Indigena</item>
+        <item>Assentamento</item>
+        <item>Anel Viário</item>
+        <item>Gleba</item>
+    </string-array>
+
+    <string-array name="MunicipioLocalizacao">
+        <item>Selecione...</item>
+        <item>Eunápolis</item>
+        <item>Porto Seguro</item>
+        <item>Itagimirim</item>
+        <item>Santa Cruz Cabrália</item>
+        <item>Itabela</item>
+        <item>Arraial ajuda</item>
+    </string-array>
+
+    <string-array name="Guiaparapericia">
+        <item>Selecione...</item>
+        <item>Local de Crime</item>
+        <item>Lesões Corporais</item>
+        <item>Necropsia</item>
+        <item>Exame Toxicológico</item>
+        <item>Recenticidade de Disparo de Arma de fogo</item>
+        <item>Balística</item>
+        <item>Chumbo particulado</item>
+        <item>Identificação de Veículo</item>
+        <item>Outras</item>
+    </string-array>
+
+    <string-array name="TipoRelatorioSemanal">
+        <item>01/01/2020 - 05/01/2020</item>
+        <item>06/01/2020 - 12/01/2020</item>
+        <item>13/01/2020 - 19/01/2020</item>
+        <item>20/01/2020 - 26/01/2020</item>
+        <item>27/01/2020 - 02/02/2020</item>
+        <item>03/02/2020 - 09/02/2020</item>
+        <item>10/02/2020 - 16/02/2020</item>
+        <item>17/02/2020 - 23/02/2020</item>
+        <item>24/02/2020 - 01/03/2020</item>
+        <item>02/03/2020 - 08/03/2020</item>
+        <item>09/03/2020 - 15/03/2020</item>
+        <item>16/03/2020 - 22/03/2020</item>
+        <item>23/03/2020 - 29/03/2020</item>
+        <item>30/03/2020 - 05/04/2020</item>
+        <item>06/04/2020 - 12/04/2020</item>
+        <item>13/04/2020 - 19/04/2020</item>
+        <item>20/04/2020 - 26/04/2020</item>
+        <item>27/04/2020 - 03/05/2020</item>
+        <item>04/05/2020 - 10/05/2020</item>
+        <item>11/05/2020 - 17/05/2020</item>
+        <item>18/05/2020 - 24/05/2020</item>
+        <item>25/05/2020 - 31/05/2020</item>
+        <item>01/06/2020 - 07/06/2020</item>
+        <item>08/06/2020 - 14/06/2020</item>
+        <item>15/06/2020 - 21/06/2020</item>
+        <item>22/06/2020 - 28/06/2020</item>
+        <item>29/06/2020 - 05/07/2020</item>
+        <item>06/07/2020 - 12/07/2020</item>
+        <item>13/07/2020 - 19/07/2020</item>
+        <item>20/07/2020 - 26/07/2020</item>
+        <item>27/07/2020 - 02/08/2020</item>
+        <item>03/08/2020 - 09/08/2020</item>
+        <item>10/08/2020 - 16/08/2020</item>
+        <item>17/08/2020 - 23/08/2020</item>
+        <item>24/08/2020 - 30/08/2020</item>
+        <item>31/08/2020 - 06/09/2020</item>
+        <item>07/09/2020 - 13/09/2020</item>
+        <item>14/09/2020 - 20/09/2020</item>
+        <item>21/09/2020 - 27/09/2020</item>
+        <item>28/09/2020 - 04/10/2020</item>
+        <item>05/10/2020 - 11/10/2020</item>
+        <item>12/10/2020 - 18/10/2020</item>
+        <item>19/10/2020 - 25/10/2020</item>
+        <item>26/10/2020 - 01/11/2020</item>
+        <item>02/11/2020 - 08/11/2020</item>
+        <item>09/11/2020 - 15/11/2020</item>
+        <item>16/11/2020 - 22/11/2020</item>
+        <item>23/11/2020 - 29/11/2020</item>
+        <item>30/11/2020 - 06/12/2020</item>
+        <item>07/12/2020 - 13/12/2020</item>
+        <item>14/12/2020 - 20/12/2020</item>
+        <item>21/12/2020 - 27/12/2020</item>
+    </string-array>
+
+    <string-array name="DTs23Coorpin">
+        <item>Selecione...</item>
+        <item>PLANTÃO DE EUNÁPOLIS</item>
+        <item>DT DE EUNÁPOLIS</item>
+        <item>DRFR/ EUNÁPOLIS</item>
+        <item>1ª DT DE PORTO SEGURO</item>
+        <item>2ª DT PORTO SEGURO/ ARRAIAL D’AJUDA</item>
+        <item>DELTUR/ PORTO SEGURO</item>
+        <item>DEAM/ PORTO SEGURO</item>
+        <item>DT DE SANTA CRUZ CABRÁLIA</item>
+        <item>DT DE BELMONTE</item>
+        <item>DT DE ITAGIMIRIM</item>
+        <item>DT DE ITAPEBI</item>
+        <item>DT DE ITABELA</item>
+        <item>DT DE GUARATINGA</item>
+    </string-array>
+
+    <string-array name="Distrito">
+        <item>Selecione...</item>
+        <item>Sede</item>
+        <item>Distrito</item>
+        <item>Vilarejo</item>
+        <item>Povoado</item>
+    </string-array>
+
+    <string-array name="Estado">
+        <item>BA</item>
+        <item>AC</item>
+        <item>AL</item>
+        <item>AP</item>
+        <item>AM</item>
+        <item>CE</item>
+        <item>DF</item>
+        <item>ES</item>
+        <item>GO</item>
+        <item>MA</item>
+        <item>MT</item>
+        <item>MS</item>
+        <item>MG</item>
+        <item>PA</item>
+        <item>PB</item>
+        <item>PR</item>
+        <item>PE</item>
+        <item>PI</item>
+        <item>RJ</item>
+        <item>RN</item>
+        <item>RS</item>
+        <item>RO</item>
+        <item>RR</item>
+        <item>SC</item>
+        <item>SP</item>
+        <item>SE</item>
+        <item>TO</item>
+    </string-array>
+
+    <string-array name="Zona">
+        <item>Selecione...</item>
+        <item>Zona Urbana</item>
+        <item>Zona Rural</item>
+    </string-array>
+
+    <string-array name="Detalhelocal">
+        <item>Selecione...</item>
+        <item>Via Pública</item>
+        <item>Interior Residência</item>
+        <item>Estabelecimento Comercial</item>
+        <item>Repartição Pública</item>
+        <item>Terreno Baldio</item>
+        <item>Mar</item>
+        <item>Rio</item>
+        <item>Praia</item>
+        <item>Estabelecimento Prisional</item>
+        <item>Mata</item>
+        <item>Plantação Agricula</item>
+        <item>Pasto</item>
+        <item>Terreiro de Camdomblé</item>
+        <item>Terreiro de Umbanda</item>
+        <item>Igreja Católica</item>
+        <item>Igreja Evnagélica</item>
+        <item>Quintal</item>
+        <item>Ponto de Ônibus</item>
+        <item>Interior de Veiculo Automotor</item>
+        <item>Outros</item>
+    </string-array>
+
+    <string-array name="StatusVitima">
+        <item>Selecione...</item>
+        <item>Óbito</item>
+        <item>Sobrevivente</item>
+    </string-array>
+
+    <string-array name="CondicaoVitima">
+        <item>Selecione...</item>
+        <item>Lesionada</item>
+        <item>Ilesa</item>
+    </string-array>
+
+    <string-array name="EstadodaVitima">
+        <item>Selecione...</item>
+        <item>Hospitalizada com risco de morte</item>
+        <item>Hospitalizada fora de risco de morte</item>
+        <item>Não hospitalizada</item>
+    </string-array>
+
+    <string-array name="GrupoSanguinioi">
+        <item>A</item>
+        <item>B</item>
+        <item>AB</item>
+        <item>O</item>
+        <item>A-</item>
+        <item>B-</item>
+        <item>AB-</item>
+        <item>O-</item>
+    </string-array>
+
+    <string-array name="FatorRH">
+        <item>Selecione...</item>
+        <item>Positivo</item>
+        <item>Negativo</item>
+    </string-array>
+
+    <string-array name="OrientacaoSexual">
+        <item>Selecione...</item>
+        <item>Heterossexual</item>
+        <item>Homossexual</item>
+        <item>Bissexual</item>
+        <item>Transsexual</item>
+        <item>Travesti</item>
+        <item>Outros</item>
+        <item>Não Informado</item>
+    </string-array>
+
+    <string-array name="Religiao">
+        <item>Selecione...</item>
+        <item>Evangélico</item>
+        <item>Católico</item>
+        <item>Espírita</item>
+        <item>Ateu</item>
+        <item>Afro</item>
+        <item>Mulçumano</item>
+        <item>Judaísmo</item>
+        <item>Budista</item>
+    </string-array>
+
+    <string-array name="StatusAutoria">
+        <item>Selecione...</item>
+        <item>Autor em Liberdade</item>
+        <item>Autor Foragido</item>
+        <item>Autor Preso</item>
+        <item>Autor Morto</item>
+    </string-array>
+
+    <string-array name="QuemPrendeu">
+        <item>Selecione...</item>
+        <item>Polícia Militar</item>
+        <item>Polícia Civil</item>
+        <item>Polícia Federal</item>
+        <item>Polícia Rodoviária Federal</item>
+        <item>Guarda Municipal</item>
+        <item>Pessoa do Povo</item>
+        <item>Outros</item>
+    </string-array>
+
+    <string-array name="NaturezaPrisao">
+        <item>Selecione...</item>
+        <item>Preventiva</item>
+        <item>Temporária</item>
+        <item>Flagrante</item>
+    </string-array>
+
+    <string-array name="ObjetosApreendidoSILC">
+        <item>Selecione...</item>
+        <item>Armas</item>
+        <item>Munições</item>
+        <item>Estojos/Cápsulas de munição</item>
+        <item>Projéteis</item>
+        <item>Celulares</item>
+        <item>Drogas</item>
+        <item>Medicamentos</item>
+        <item>Venenos</item>
+        <item>Outros</item>
+    </string-array>
+
+    <string-array name="Sexo">
+        <item>Selecione...</item>
+        <item>Masculino</item>
+        <item>Feminino</item>
+        <item>Desconhecida</item>
+    </string-array>
+
+    <string-array name="CautelaresRepresentadas">
+        <item>Selecione...</item>
+        <item>Busca e Apreensão</item>
+        <item>Prisão Temporária</item>
+        <item>Prisão Preventiva</item>
+        <item>Quebra de Sigilo</item>
+    </string-array>
+
+    <string-array name="CargoEquipeLevantamento">
+        <item>Selecione...</item>
+        <item>DPC</item>
+        <item>EPC</item>
+        <item>IPC</item>
+        <item>ADM</item>
+    </string-array>
+
+    <string-array name="CargoEquipePerito">
+        <item>Selecione...</item>
+        <item>Perito Técnico</item>
+        <item>Perito Criminal</item>
+        <item>Motorista</item>
+        <item>Legista</item>
+    </string-array>
+
+    <string-array name="CargoEquipePreservacaoLocal">
+        <item>Selecione...</item>
+        <item>SD|PM</item>
+        <item>SGT|PM</item>
+        <item>CB|PM</item>
+        <item>TEN|PM</item>
+    </string-array>
+
+    <string-array name="Nacionalidade">
+        <item>Selecione...</item>
+        <item>Brasileiro</item>
+        <item>Estrangeiro</item>
+    </string-array>
+
+    <string-array name="EstadoCivil">
+        <item>Selecione...</item>
+        <item>Casado</item>
+        <item>Solteiro</item>
+        <item>Viuvo</item>
+        <item>Disvorciado</item>
+    </string-array>
+
+    <string-array name="Escolaridade">
+        <item>Selecione...</item>
+        <item>Analfabeto</item>
+        <item>Ensino Fundamental</item>
+        <item>Ensino Fundamental Incompleto</item>
+        <item>Nível Superior</item>
+        <item>Nível Superior Incompleto</item>
+    </string-array>
+
+    <string-array name="Curtis">
+        <item>Selecione...</item>
+        <item>Branco</item>
+        <item>Negro</item>
+    </string-array>
+
+    <string-array name="MotivacaoCrimes">
+        <item>Selecione...</item>
+        <item>Dívida de drogas</item>
+        <item>Briga do tráfico</item>
+        <item>Disputa entre facções</item>
+        <item>Violência doméstica</item>
+        <item>Crime passional</item>
+        <item>Roubo seguido de morte</item>
+        <item>Briga de trânsito</item>
+        <item>Briga de bar</item>
+        <item>Briga de vizinhos</item>
+        <item>Discussão por embriaguez</item>
+        <item>Discussão em família</item>
+        <item>Vingança</item>
+        <item>Vingança privada (fazer justiça)</item>
+        <item>Legítima defesa</item>
+        <item>Preterdolo</item>
+        <item>Assegurar a impunidade de outro crime</item>
+        <item>Extorsão mediante seqüestro</item>
+        <item>Estupro seguido de morte</item>
+        <item>Motim/ rebelião</item>
+        <item>Intolerância política</item>
+        <item>Intolerância religiosa</item>
+        <item>Homofobia</item>
+        <item>Crime de ódio ou racismo</item>
+        <item>Ritual religioso</item>
+        <item>Rivalidade profissional</item>
+        <item>Prêmio de seguro</item>
+        <item>Dívida contraída pelo autor</item>
+        <item>Dívida contraída pela vítima</item>
+        <item>Sucessão política</item>
+        <item>Conflito agrário</item>
+        <item>Desentendimento fútil</item>
+        <item>Outra não relacionada</item>
+        <item>Motivação não identificada</item>
+    </string-array>
+
+    <string-array name="TipoAutomovelCrime">
+        <item>Selecione...</item>
+        <item>Biscicleta</item>
+        <item>Automóvel Sedan</item>
+        <item>Automóvel hatch</item>
+        <item>Automóvel SUV</item>
+        <item>Caminhão</item>
+        <item>Caminhonete</item>
+        <item>Motocicleta</item>
+    </string-array>
+
+    <string-array name="TipoAutomovelVistoria">
+        <item>Selecione...</item>
+        <item>Ônibus</item>
+        <item>Reboque</item>
+        <item>Automovel</item>
+        <item>Motocicleta</item>
+        <item>Triciclo</item>
+        <item>Caminhonete</item>
+        <item>Caminhão</item>
+        <item>Carreta</item>
+        <item>Cavalinho</item>
+        <item>Outros</item>
+    </string-array>
+
+    <string-array name="NivelCombustivel">
+        <item>Selecione...</item>
+        <item>Vazio</item>
+        <item>Reserva</item>
+        <item>1/4</item>
+        <item>Meio Tanque</item>
+        <item>3/4</item>
+        <item>Cheio</item>
+    </string-array>
+
+    <string-array name="Ano">
+        <item>2019</item>
+        <item>2020</item>
+        <item>2021</item>
+        <item>2022</item>
+        <item>2023</item>
+        <item>2024</item>
+        <item>2025</item>
+        <item>2026</item>
+        <item>2027</item>
+        <item>2028</item>
+        <item>2029</item>
+        <item>2030</item>
+        <item>2031</item>
+        <item>2032</item>
+        <item>2033</item>
+        <item>2034</item>
+        <item>2035</item>
+        <item>2036</item>
+        <item>2037</item>
+        <item>2038</item>
+        <item>2039</item>
+        <item>2040</item>
+        <item>2041</item>
+        <item>2042</item>
+        <item>2043</item>
+        <item>2044</item>
+        <item>2045</item>
+        <item>2046</item>
+        <item>2047</item>
+        <item>2048</item>
+        <item>2049</item>
+        <item>2050</item>
+    </string-array>
+
+    <string-array name="AreaTerritorial">
+        <item>ESTADO</item>
+        <item>CAPITAL</item>
+        <item>DEPOM</item>
+        <item>DEPIN</item>
+        <item>RISP</item>
+        <item>AISP</item>
+    </string-array>
+
+    <string-array name="AreaTerritorialBahia">
+        <item>BAHIA</item>
+    </string-array>
+
+    <string-array name="AreaTerritorialSalvador">
+        <item>SALVADOR</item>
+    </string-array>
+
+    <string-array name="AreaTerritorialDepin">
+        <item>DEPIN</item>
+    </string-array>
+
+    <string-array name="AreaTerritorialDepom">
+        <item>DEPOM</item>
+    </string-array>
+
+    <string-array name="AreaTerritorialRisp">
+        <item>RISP SUL</item>
+        <item>RISP NORTE</item>
+        <item>RISP OESTE</item>
+        <item>RISP CENTRAL</item>
+        <item>RISP ATLÂNTICO</item>
+        <item>RISP BTS</item>
+        <item>RISP RM</item>
+    </string-array>
+
+    <string-array name="AreaTerritorialAisp">
+        <item>AISP 35/Eunápolis</item>
+        <item>AISP 36/Itabuna</item>
+        <item>AISP 37/Ilhéus</item>
+        <item>AISP 38/Teixeira de Freitas</item>
+        <item>AISP 39/Valença</item>
+    </string-array>
+
+    <string-array name="Filtro">
+        <item>Todos</item>
+        <item>Vítima</item>
+        <item>Autoria</item>
+        <item>Motivação</item>
+        <item>Meio Empregado</item>
+        <item>Dia da Semana</item>
+        <item>Detalhamento do Local</item>
+        <item>Zoneamento</item>
+        <item>Veículo Utilizado</item>
+        <item>Arma de Fogo</item>
+    </string-array>
+
+    <string-array name="MarcaCarroCrime">
+        <item>Selecione...</item>
+        <item>Audi</item>
+        <item>BMW</item>
+        <item>Chevrolet</item>
+        <item>Cintroën</item>
+        <item>Fiat</item>
+        <item>Ford</item>
+        <item>Honda</item>
+        <item>Hyundai</item>
+        <item>Jac</item>
+        <item>Land Rover</item>
+        <item>Kia</item>
+        <item>Mercedes Benz</item>
+        <item>Mistsubishi</item>
+        <item>Nissan</item>
+        <item>Peugeot</item>
+        <item>Renault</item>
+        <item>Suzuki</item>
+        <item>Toyota</item>
+        <item>Volkswagem</item>
+        <item>Volvo</item>
+    </string-array>
+
+    <string-array name="ArmasAcaoPolicial">
+        <item>Selecione...</item>
+        <item>Pistola</item>
+        <item>Revólver</item>
+        <item>Espingarda de Repetição</item>
+        <item>Espingarda Chumbeira</item>
+        <item>Fuzil</item>
+        <item>Submetralhadora</item>
+    </string-array>
+
+    <string-array name="TipoApresentacaoDrogas">
+        <item>Selecione...</item>
+        <item>Papelotes</item>
+        <item>Pinos</item>
+        <item>Tabletes</item>
+        <item>Cigarros</item>
+        <item>Pedras</item>
+        <item>Comprimidos</item>
+        <item>Invólucros/ garrafas</item>
+        <item>Pés de plantas</item>
+        <item>Injetáveis</item>
+    </string-array>
+
+    <string-array name="TipoDrogasAcaoPolicial">
+        <item>Selecione...</item>
+        <item>Maconha</item>
+        <item>Crack</item>
+        <item>Cocaína</item>
+        <item>Ecstasy</item>
+        <item>Outras</item>
+    </string-array>
+
+    <string-array name="TipoProcedimentoRelacionadoAcaoPolicial">
+        <item>Selecione...</item>
+        <item>Auto de Apreensão</item>
+        <item>BOC</item>
+        <item>Qualificação, oitiva e entrega a responsável</item>
+    </string-array>
+
+    <string-array name="TipoConducaoAcaoPolicial">
+        <item>Selecione...</item>
+        <item>Condução para qualificação e oitiva</item>
+        <item>Prisão em Flagrante</item>
+        <item>Prisão Temporária</item>
+        <item>Prisão Preventiva</item>
+        <item>Prisão por condenação</item>
+    </string-array>
+
+    <string-array name="ModeloBiscicleta">
+        <item>Selecione...</item>
+        <item>Masculino</item>
+        <item>Feminino</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="data">Data</string>
+    <string name="horario">Horário</string>
+    <string name="versao">Versão</string>
+    <string name="da_fase_judicial">DA FASE JUDICIAL</string>
+    <string name="data_do_silc">DATA DO SILC</string>
+    <string name="horario_do_silc">HORÁRIO DO SILC</string>
+    <string name="detalhamento_localSilc">Detalhamento Local</string>
+    <string name="detalhamento_outroSilc">Detalhamento Outro</string>
+    <string name="endereco_do_silc">Endereço do Silc</string>
+    <string name="cargo">Cargo</string>
+    <string name="nome_da_vitima">Nome da VÍtima</string>
+    <string name="sexo">Sexo</string>
+    <string name="nascionalidade">Nascionalidade</string>
+    <string name="naturalidade">Naturalidade</string>
+    <string name="estado_civil">Estado Civil</string>
+    <string name="profissao">Profissão</string>
+    <string name="qualificao_da_vitima">Qualificação da Vítima</string>
+    <string name="qualificao_da_autoria">Qualificação da Autoria</string>
+    <string name="status_da_vitima">CONDIÇÃO DA VÍTIMA</string>
+    <string name="status_da_autoria">STATUS DA AUTORIA</string>
+    <string name="documentos_da_vitima">Documentos da Vítima</string>
+    <string name="escolaridade">Escolaridade</string>
+    <string name="nome_da_mae">Nome da Mãe</string>
+    <string name="nome_do_pai">Nome do Pai</string>
+    <string name="grupo_sanguinio_fator_rh">Grupo Sanguinio/Fator RH</string>
+    <string name="altura">Altura</string>
+    <string name="cutis_cor_da_pele">Cutis(Cor da pele)</string>
+    <string name="horientaco_sexual">Orientação Sexual</string>
+    <string name="religiao">Religião</string>
+    <string name="identificada_Autoria">Identificada</string>
+    <string name="nao_identificadaAutoria">Não Identificada</string>
+    <string name="apenas_suspeitoAutoria">Apenas suspeito</string>
+    <string name="tipo">Tipo</string>
+    <string name="cadastros_de_carros_envolvidos_na_acoocriminosa">Cadastros de carros envolvidos na ação criminosa</string>
+    <string name="vulgo">Vulgo</string>
+    <string name="natureza_da_prisso">Natureza da Prisão</string>
+    <string name="dados_da_prisao">Dados da Prisão</string>
+    <string name="instrumento_do_crime_apreendido">Instrumento do Crime Apreendido</string>
+    <string name="omissao_de_socorro">Omissão de socorro</string>
+    <string name="intoxicacao">Intoxicação</string>
+    <string name="empurrao_sob_veiculo_em_deslocamento">Empurrão sob veículo em deslocamento</string>
+    <string name="disparo_de_arma_de_fogo">Disparo de arma de fogo</string>
+    <string name="socos_e_pontapes">Socos e pontapés</string>
+    <string name="incendio">Incêndio</string>
+    <string name="esganadura">Esganadura</string>
+    <string name="evenenamento">Evenenamento</string>
+    <string name="queimadura_com_acido">Ácido</string>
+    <string name="empurrao_de_altura">Empurrão de Altura</string>
+    <string name="nao_identificado">Não identificado</string>
+    <string name="enterrado_vivo">Enterrado Vivo</string>
+    <string name="outros_nao_relacionados">Outros não relacionados</string>
+    <string name="atropelamento">Atropelamento</string>
+    <string name="queimaduras">Queimaduras</string>
+    <string name="afogamento">Afogamento</string>
+    <string name="asfixia_direta_ou_indireta">Asfixia indireta</string>
+    <string name="perfuracoes">Perfurações</string>
+    <string name="golpe_de_faca">Golpe de faca</string>
+    <string name="golpe_de_facao">Golpe de Facao</string>
+    <string name="estrangulamento">Estrangulamento</string>
+    <string name="pauladas">Pauladas</string>
+    <string name="pedradas">Pedradas</string>
+    <string name="meio_empregado">Meio Empregado</string>
+    <string name="hororio_do_fato">Horário do Fato</string>
+    <string name="endere_o_do_fato">Endereço do Fato</string>
+    <string name="natureza_do_fato">Natureza do Fato</string>
+    <string name="indefinido">Indefinida</string>
+    <string name="cadastro_do_automovel_utilizado_no_crime">Veículo Utilizado na Ação Criminosa</string>
+    <string name="tipo_de_veiculo">Tipo de Veículo</string>
+    <string name="veiculos">Veículos Envolvidos</string>
+    <string name="title_activity_tipos_relatorios">Relatórios</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="tab_text_3">Tab 3</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+
+</resources>

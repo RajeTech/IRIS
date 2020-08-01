@@ -1,0 +1,969 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBacground"
+    tools:context=".FatoActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="486dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        android:clickable="true"
+        android:focusableInTouchMode="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <Spinner
+                android:id="@+id/spinnerNatureza"
+                android:layout_width="0dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorSpinner"
+                android:visibility="invisible"
+                android:imeOptions="actionNext"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnNaturezaFato" />
+
+            <EditText
+                android:id="@+id/edtData"
+                android:layout_width="113dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/colorEditext"
+                android:ems="10"
+                android:inputType="date"
+                android:textColorLink="@color/colorPrimary"
+                android:visibility="invisible"
+                android:imeOptions="actionNext"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnDataFato"
+                tools:ignore="OnClick" />
+
+            <EditText
+                android:id="@+id/edtHorario"
+                android:layout_width="110dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/colorEditext"
+                android:ems="10"
+                android:inputType="time"
+                android:textColorLink="@color/colorPrimary"
+                android:visibility="invisible"
+                android:imeOptions="actionNext"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnHorarioFato" />
+
+            <CheckBox
+                android:id="@+id/cbIndefinidoDataFato"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:text="@string/indefinido"
+                android:visibility="invisible"
+                android:imeOptions="actionNext"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.306"
+                app:layout_constraintStart_toEndOf="@+id/edtData"
+                app:layout_constraintTop_toBottomOf="@+id/btnDataFato" />
+
+            <CheckBox
+                android:id="@+id/cbindefinidohorariofato"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:text="@string/nao_identificado"
+                android:visibility="invisible"
+                android:imeOptions="actionNext"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.309"
+                app:layout_constraintStart_toEndOf="@+id/edtHorario"
+                app:layout_constraintTop_toBottomOf="@+id/btnHorarioFato" />
+
+            <Button
+                android:id="@+id/btnNaturezaFato"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorBotao"
+                android:text="@string/natureza_do_fato"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btnDataFato"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorBotao"
+                android:text="Data do Fato"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerNatureza" />
+
+            <Button
+                android:id="@+id/btnHorarioFato"
+                android:layout_width="364dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorBotao"
+                android:text="@string/hororio_do_fato"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtData" />
+
+            <Button
+                android:id="@+id/btnMotivacao"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorBotao"
+                android:text="Motivação do Fato"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cbOutrosNaoRelacionadosMeioEmpregado" />
+
+            <Button
+                android:id="@+id/BtnEndereco"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorBotao"
+                android:text="@string/endere_o_do_fato"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtHorario" />
+
+            <Button
+                android:id="@+id/btnMeioEmpregado"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorBotao"
+                android:text="@string/meio_empregado"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerZonaFato" />
+
+            <TextView
+                android:id="@+id/tvLougradouroFato"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/logradouro"
+                android:textStyle="bold"
+                android:visibility="invisible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerDetalhamentoLocalFato" />
+
+            <TextView
+                android:id="@+id/tvNLogradouroFato"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/numero"
+                android:textStyle="bold"
+                android:visibility="invisible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerLogradouroFato" />
+
+            <Spinner
+                android:id="@+id/spinnerLogradouroFato"
+                android:layout_width="171dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/colorSpinner"
+                android:visibility="invisible"
+                android:imeOptions="actionNext"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvLougradouroFato" />
+
+            <EditText
+                android:id="@+id/edtLogradouroFato"
+                android:layout_width="159dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorEditext"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:visibility="invisible"
+                android:imeOptions="actionNext"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/spinnerLogradouroFato"
+                app:layout_constraintTop_toBottomOf="@+id/tvLougradouroFato" />
+
+            <EditText
+                android:id="@+id/edtNLogradouroFato"
+                android:layout_width="61dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/colorEditext"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:visibility="invisible"
+                android:imeOptions="actionNext"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvNLogradouroFato" />
+
+            <TextView
+                android:id="@+id/tvReferenciaLocalFato"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:text="@string/refer_ncia_do_local"
+                android:textStyle="bold"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.077"
+                app:layout_constraintStart_toEndOf="@+id/tvNLogradouroFato"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerLogradouroFato" />
+
+            <TextView
+                android:id="@+id/tvBairroFato"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:text="@string/bairro"
+                android:textStyle="bold"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtNLogradouroFato" />
+
+            <EditText
+                android:id="@+id/edtReferenciaLocalFato"
+                android:layout_width="276dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorEditext"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:visibility="invisible"
+                android:imeOptions="actionNext"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/edtNLogradouroFato"
+                app:layout_constraintTop_toBottomOf="@+id/tvReferenciaLocalFato" />
+
+            <EditText
+                android:id="@+id/edtBairroFato"
+                android:layout_width="0dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorEditext"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:visibility="invisible"
+                android:imeOptions="actionNext"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvBairroFato" />
+
+            <TextView
+                android:id="@+id/tvDisVilPovoFato"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:text="@string/distrito_vilarejo_povoado"
+                android:textStyle="bold"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.029"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtBairroFato" />
+
+            <Spinner
+                android:id="@+id/spinnerDisVilPovoFato"
+                android:layout_width="137dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/colorSpinner"
+                android:visibility="invisible"
+                android:imeOptions="actionNext"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDisVilPovoFato" />
+
+            <EditText
+                android:id="@+id/edtDisVilPovoFato"
+                android:layout_width="201dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorEditext"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:visibility="invisible"
+                android:imeOptions="actionNext"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/spinnerDisVilPovoFato"
+                app:layout_constraintTop_toBottomOf="@+id/tvDisVilPovoFato" />
+
+            <TextView
+                android:id="@+id/tvMunicipioFatoCvli"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:text="@string/municipio"
+                android:textStyle="bold"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerDisVilPovoFato" />
+
+            <Spinner
+                android:id="@+id/spinnerEstadoFato"
+                android:layout_width="71dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorSpinner"
+                android:imeOptions="actionNext"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/spMunicipioFato"
+                app:layout_constraintTop_toBottomOf="@+id/tvMunicipioFatoCvli" />
+
+            <TextView
+                android:id="@+id/tvZonaFato"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:text="@string/zona"
+                android:textStyle="bold"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spMunicipioFato" />
+
+            <Spinner
+                android:id="@+id/spinnerZonaFato"
+                android:layout_width="0dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorSpinner"
+                android:visibility="invisible"
+                android:imeOptions="actionNext"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvZonaFato" />
+
+            <TextView
+                android:id="@+id/tvDetalhamentoLocalFato"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/detalhamento_do_local"
+                android:textStyle="bold"
+                android:visibility="invisible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rgEnderecoFato" />
+
+            <TextView
+                android:id="@+id/tvDetalhamentoOutroFato"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:text="@string/detalhamento_outro"
+                android:textStyle="bold"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.333"
+                app:layout_constraintStart_toEndOf="@+id/tvDetalhamentoLocalFato"
+                app:layout_constraintTop_toBottomOf="@+id/rgEnderecoFato" />
+
+            <Spinner
+                android:id="@+id/spinnerDetalhamentoLocalFato"
+                android:layout_width="174dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/colorSpinner"
+                android:visibility="invisible"
+                android:imeOptions="actionNext"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDetalhamentoLocalFato" />
+
+            <EditText
+                android:id="@+id/edtDetalhamentoOutroFato"
+                android:layout_width="167dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorEditext"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:visibility="invisible"
+                android:imeOptions="actionNext"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.333"
+                app:layout_constraintStart_toEndOf="@+id/spinnerDetalhamentoLocalFato"
+                app:layout_constraintTop_toBottomOf="@+id/tvDetalhamentoOutroFato" />
+
+            <Button
+                android:id="@+id/btnRegistarFato"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/colorBotao"
+                android:text="@string/salvar"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lvCarro" />
+
+            <CheckBox
+                android:id="@+id/cbAfogamento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="8dp"
+                android:imeOptions="actionNext"
+                android:text="@string/afogamento"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cbPerfuracoes" />
+
+            <CheckBox
+                android:id="@+id/cbAsfixia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:imeOptions="actionNext"
+                android:text="@string/asfixia_direta_ou_indireta"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.74"
+                app:layout_constraintStart_toEndOf="@+id/cbPerfuracoes"
+                app:layout_constraintTop_toBottomOf="@+id/cbEmpurraoAltura" />
+
+            <CheckBox
+                android:id="@+id/cbAtropelamento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:imeOptions="actionNext"
+                android:text="@string/atropelamento"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.71"
+                app:layout_constraintStart_toEndOf="@+id/cbEvenenamento"
+                app:layout_constraintTop_toBottomOf="@+id/cbEsganadura" />
+
+            <CheckBox
+                android:id="@+id/cbDisparoArma"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:imeOptions="actionNext"
+                android:text="@string/disparo_de_arma_de_fogo"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnMeioEmpregado" />
+
+            <CheckBox
+                android:id="@+id/cbEmpurraoAltura"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:imeOptions="actionNext"
+                android:text="@string/empurrao_de_altura"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.98"
+                app:layout_constraintStart_toEndOf="@+id/cbQueimaduraAcos"
+                app:layout_constraintTop_toBottomOf="@+id/cbQueimaduras" />
+
+            <CheckBox
+                android:id="@+id/cbEmpurraoCarro"
+                android:layout_width="0dp"
+                android:layout_height="34dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:imeOptions="actionNext"
+                android:text="@string/empurrao_sob_veiculo_em_deslocamento"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.395"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cbAfogamento" />
+
+            <CheckBox
+                android:id="@+id/cbEvenenamento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/evenenamento"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cbEstrangulamento" />
+
+            <CheckBox
+                android:id="@+id/cbEsganadura"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:imeOptions="actionNext"
+                android:text="@string/esganadura"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.52"
+                app:layout_constraintStart_toEndOf="@+id/cbEstrangulamento"
+                app:layout_constraintTop_toBottomOf="@+id/cbSocosPontapes" />
+
+            <CheckBox
+                android:id="@+id/cbGolpeFaca"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:imeOptions="actionNext"
+                android:text="@string/golpe_de_faca"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.09"
+                app:layout_constraintStart_toEndOf="@+id/cbDisparoArma"
+                app:layout_constraintTop_toBottomOf="@+id/btnMeioEmpregado" />
+
+            <CheckBox
+                android:id="@+id/cbGolpeFacao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:imeOptions="actionNext"
+                android:text="@string/golpe_de_facao"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cbDisparoArma" />
+
+            <CheckBox
+                android:id="@+id/cbEstrangulamento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/estrangulamento"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cbPedradas" />
+
+            <CheckBox
+                android:id="@+id/cbIncendio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:imeOptions="actionNext"
+                android:text="@string/incendio"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cbEvenenamento" />
+
+            <CheckBox
+                android:id="@+id/cbOmissaoSocorro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:text="@string/omissao_de_socorro"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.96"
+                app:layout_constraintStart_toEndOf="@+id/cbAfogamento"
+                app:layout_constraintTop_toBottomOf="@+id/cbAsfixia" />
+
+            <CheckBox
+                android:id="@+id/cbPauladas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:text="@string/pauladas"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.47"
+                app:layout_constraintStart_toEndOf="@+id/cbGolpeFacao"
+                app:layout_constraintTop_toBottomOf="@+id/cbGolpeFaca" />
+
+            <CheckBox
+                android:id="@+id/cbPedradas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/pedradas"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cbGolpeFacao" />
+
+            <CheckBox
+                android:id="@+id/cbPerfuracoes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/perfuracoes"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cbQueimaduraAcos" />
+
+            <CheckBox
+                android:id="@+id/cbQueimaduras"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:text="@string/queimaduras"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.72"
+                app:layout_constraintStart_toEndOf="@+id/cbIncendio"
+                app:layout_constraintTop_toBottomOf="@+id/cbAtropelamento" />
+
+            <CheckBox
+                android:id="@+id/cbQueimaduraAcos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/queimadura_com_acido"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cbIncendio" />
+
+            <CheckBox
+                android:id="@+id/cbSocosPontapes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:text="@string/socos_e_pontapes"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.89"
+                app:layout_constraintStart_toEndOf="@+id/cbPedradas"
+                app:layout_constraintTop_toBottomOf="@+id/cbPauladas" />
+
+            <CheckBox
+                android:id="@+id/cbOutrosNaoRelacionadosMeioEmpregado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:text="@string/outros_nao_relacionados"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cbNaoIdentificadoMeioEmpregado" />
+
+            <CheckBox
+                android:id="@+id/cbNaoIdentificadoMeioEmpregado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:text="@string/nao_identificado"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/cbTortura"
+                app:layout_constraintTop_toBottomOf="@+id/cbEmpurraoCarro" />
+
+            <CheckBox
+                android:id="@+id/cbTortura"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Tortura"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cbEmpurraoCarro" />
+
+            <Spinner
+                android:id="@+id/spinnerMotivacaoFato"
+                android:layout_width="0dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorSpinner"
+                android:visibility="invisible"
+                android:imeOptions="actionNext"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnMotivacao" />
+
+            <Button
+                android:id="@+id/btnCarroFato"
+                android:layout_width="0dp"
+                android:layout_height="53dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorBotao"
+                android:text="@string/veiculos"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerMotivacaoFato" />
+
+
+            <ListView
+                android:id="@+id/lvCarro"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorEditext"
+                android:scrollbars="none"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnCarroFato" />
+
+            <RadioGroup
+                android:id="@+id/rgEnderecoFato"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:orientation="horizontal"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/BtnEndereco">
+
+                <RadioButton
+                    android:id="@+id/rbDefinidoEnderecoFato"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:imeOptions="actionNext"
+                    android:text="Identificado" />
+
+                <RadioButton
+                    android:id="@+id/rbIndefinidoEnderecoFato"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:imeOptions="actionNext"
+                    android:text="Não Identificado" />
+            </RadioGroup>
+
+            <Spinner
+                android:id="@+id/spMunicipioFato"
+                android:layout_width="221dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/colorSpinner"
+                android:visibility="invisible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvMunicipioFatoCvli" />
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

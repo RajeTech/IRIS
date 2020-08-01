@@ -1,0 +1,764 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBacground"
+    tools:context=".AutoriaActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        android:clickable="true"
+        android:focusableInTouchMode="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btnAutoria"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorBotao"
+                android:text="Autoria"
+                android:visibility="visible"
+                android:imeOptions="actionNext"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/tvRGAutoria"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/rg"
+                android:textStyle="bold"
+                android:visibility="invisible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtVulgoAutoria" />
+
+            <TextView
+                android:id="@+id/tvCPFAutoria"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/cpf"
+                android:textStyle="bold"
+                android:visibility="invisible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtRGAutoria" />
+
+            <EditText
+                android:id="@+id/edtRGAutoria"
+                android:layout_width="133dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/colorEditext"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:visibility="invisible"
+                android:imeOptions="actionNext"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvRGAutoria" />
+
+            <EditText
+                android:id="@+id/edtCPFAutoria"
+                android:layout_width="134dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/colorEditext"
+                android:ems="10"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:visibility="invisible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvCPFAutoria" />
+
+            <EditText
+                android:id="@+id/edtNomeAutoria"
+                android:layout_width="0dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorEditext"
+                android:ems="10"
+                android:imeOptions="actionNext"
+                android:inputType="textPersonName"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvVulgoAutoria" />
+
+            <TextView
+                android:id="@+id/tvIdadeAutoria"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:text="@string/idade"
+                android:textStyle="bold"
+                android:visibility="invisible"
+                android:imeOptions="actionNext"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.386"
+                app:layout_constraintStart_toEndOf="@+id/tvCPFAutoria"
+                app:layout_constraintTop_toBottomOf="@+id/edtOrgaoExpAutoria" />
+
+            <EditText
+                android:id="@+id/edtIdadeAutoria"
+                android:layout_width="70dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/colorEditext"
+                android:ems="10"
+                android:inputType="number"
+                android:visibility="invisible"
+                android:imeOptions="actionNext"
+                app:layout_constraintStart_toEndOf="@+id/edtCPFAutoria"
+                app:layout_constraintTop_toBottomOf="@+id/tvIdadeAutoria" />
+
+            <Button
+                android:id="@+id/btnIncluirAutoria"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/colorBotao"
+                android:text="Incluir Novo"
+                android:visibility="invisible"
+                android:imeOptions="actionNext"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerStatusAutoria" />
+
+            <TextView
+                android:id="@+id/tvOrgaoExpAutoria"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="132dp"
+                android:layout_marginLeft="132dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/orgao_exp"
+                android:textStyle="bold"
+                android:visibility="invisible"
+                app:layout_constraintStart_toEndOf="@+id/tvRGAutoria"
+                app:layout_constraintTop_toBottomOf="@+id/edtVulgoAutoria" />
+
+            <EditText
+                android:id="@+id/edtOrgaoExpAutoria"
+                android:layout_width="68dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/colorEditext"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:visibility="invisible"
+                android:imeOptions="actionNext"
+                app:layout_constraintStart_toEndOf="@+id/edtRGAutoria"
+                app:layout_constraintTop_toBottomOf="@+id/tvOrgaoExpAutoria" />
+
+            <Button
+                android:id="@+id/btnQualificacaoAutoria"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorBotao"
+                android:imeOptions="actionNext"
+                android:text="@string/qualificao_da_autoria"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rgIndefinidaDefinidaAutoria" />
+
+            <TextView
+                android:id="@+id/tvSexoAutoria"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:text="@string/sexo"
+                android:textStyle="bold"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.315"
+                app:layout_constraintStart_toEndOf="@+id/tvOrgaoExpAutoria"
+                app:layout_constraintTop_toBottomOf="@+id/edtVulgoAutoria" />
+
+            <TextView
+                android:id="@+id/tvNascionalidadeAutoria"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/nascionalidade"
+                android:textStyle="bold"
+                android:visibility="invisible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtNomePaiAutoria" />
+
+            <TextView
+                android:id="@+id/tvNaturalidadeAutoria"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:text="@string/naturalidade"
+                android:textStyle="bold"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvNascionalidadeAutoria"
+                app:layout_constraintTop_toBottomOf="@+id/edtNomePaiAutoria" />
+
+            <TextView
+                android:id="@+id/tvNomeMaeAutoria"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:text="@string/nome_da_mae"
+                android:textStyle="bold"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.007"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtCPFAutoria" />
+
+            <TextView
+                android:id="@+id/tvNomePaiAutoria"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:text="@string/nome_do_pai"
+                android:textStyle="bold"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtNomeMaeAutoria" />
+
+            <Spinner
+                android:id="@+id/spinnerSexoAutoria"
+                android:layout_width="114dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorSpinner"
+                android:visibility="invisible"
+                android:imeOptions="actionNext"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/edtOrgaoExpAutoria"
+                app:layout_constraintTop_toBottomOf="@+id/tvSexoAutoria" />
+
+            <Spinner
+                android:id="@+id/spinnerNacionalidadeAutoria"
+                android:layout_width="148dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/colorSpinner"
+                android:visibility="invisible"
+                android:imeOptions="actionNext"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvNascionalidadeAutoria" />
+
+            <EditText
+                android:id="@+id/edtNomeMaeAutoria"
+                android:layout_width="0dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorEditext"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:visibility="invisible"
+                android:imeOptions="actionNext"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvNomeMaeAutoria" />
+
+            <EditText
+                android:id="@+id/edtNomePaiAutoria"
+                android:layout_width="0dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorEditext"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:visibility="invisible"
+                android:imeOptions="actionNext"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvNomePaiAutoria" />
+
+            <TextView
+                android:id="@+id/tvCurtisAutoria"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:text="@string/cutis_cor_da_pele"
+                android:textStyle="bold"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvIdadeAutoria"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerSexoAutoria" />
+
+            <Spinner
+                android:id="@+id/spinnerCutisAutoria"
+                android:layout_width="117dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorSpinner"
+                android:visibility="invisible"
+                android:imeOptions="actionNext"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/edtIdadeAutoria"
+                app:layout_constraintTop_toBottomOf="@+id/tvCurtisAutoria" />
+
+
+            <RadioGroup
+                android:id="@+id/rgIndefinidaDefinidaAutoria"
+                android:layout_width="337dp"
+                android:layout_height="130dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:orientation="vertical"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.296"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnAutoria">
+
+                <RadioButton
+                    android:id="@+id/rbDefinidaAutoria"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="false"
+                    android:imeOptions="actionNext"
+                    android:text="Identificado" />
+
+                <RadioButton
+                    android:id="@+id/rbIndefinidaAutoria"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="false"
+                    android:imeOptions="actionNext"
+                    android:text="Não Identificado" />
+
+                <RadioButton
+                    android:id="@+id/rbApenasSuspeito"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="false"
+                    android:imeOptions="actionNext"
+                    android:text="Há Apenas Suspeitos" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tvNomeAutoria"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/nome"
+                android:textStyle="bold"
+                android:visibility="invisible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtNomeAutoria" />
+
+            <Spinner
+                android:id="@+id/spinnerStatusAutoria"
+                android:layout_width="0dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorSpinner"
+                android:visibility="invisible"
+                android:imeOptions="actionNext"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnEstatusAutoria" />
+
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/clAutoriaPresa"
+                android:layout_width="match_parent"
+                android:layout_height="322dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerStatusAutoria">
+
+                <TextView
+                    android:id="@+id/tvDataPrisao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/data_da_prisao"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTituloAutorPreso" />
+
+                <TextView
+                    android:id="@+id/tvLocalPrisao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:text="@string/local_da_prisao"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.416"
+                    app:layout_constraintStart_toEndOf="@+id/tvDataPrisao"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTituloAutorPreso" />
+
+                <TextView
+                    android:id="@+id/tvHorarioPrisao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/horario_da_prisao"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edtDataPrisao" />
+
+                <TextView
+                    android:id="@+id/tvNaturezaPrisao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:text="@string/natureza_da_prisso"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.253"
+                    app:layout_constraintStart_toEndOf="@+id/tvHorarioPrisao"
+                    app:layout_constraintTop_toBottomOf="@+id/edtLocalPrisao" />
+
+                <TextView
+                    android:id="@+id/tvResponsavelPrisao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:text="Responsável pela Prisão"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edtHorarioPrisao" />
+
+                <EditText
+                    android:id="@+id/edtDataPrisao"
+                    android:layout_width="111dp"
+                    android:layout_height="46dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@color/colorEditext"
+                    android:ems="10"
+                    android:inputType="date"
+                    android:imeOptions="actionNext"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvDataPrisao" />
+
+                <EditText
+                    android:id="@+id/edtLocalPrisao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="46dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@color/colorEditext"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:imeOptions="actionNext"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/edtDataPrisao"
+                    app:layout_constraintTop_toBottomOf="@+id/tvLocalPrisao" />
+
+                <EditText
+                    android:id="@+id/edtHorarioPrisao"
+                    android:layout_width="105dp"
+                    android:layout_height="46dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@color/colorEditext"
+                    android:ems="10"
+                    android:inputType="time"
+                    android:imeOptions="actionNext"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvHorarioPrisao" />
+
+                <Spinner
+                    android:id="@+id/spinnerNaturezaPrisao"
+                    android:layout_width="206dp"
+                    android:layout_height="46dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@color/colorSpinner"
+                    android:imeOptions="actionNext"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/edtHorarioPrisao"
+                    app:layout_constraintTop_toBottomOf="@+id/tvNaturezaPrisao" />
+
+                <TextView
+                    android:id="@+id/tvTituloAutorPreso"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="@string/dados_da_prisao"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/btnCadastroAutoriaPrisao"
+                    android:layout_width="177dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/colorBotao"
+                    android:text="Incluir novo"
+                    android:imeOptions="actionNext"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/spinnerResponsavelPrisaoAutoria" />
+
+                <Button
+                    android:id="@+id/btnFinalizarPreso"
+                    android:layout_width="148dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@color/colorBotao"
+                    android:text="Concluir"
+                    android:imeOptions="actionNext"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/btnCadastroAutoriaPrisao"
+                    app:layout_constraintTop_toBottomOf="@+id/spinnerResponsavelPrisaoAutoria" />
+
+                <Spinner
+                    android:id="@+id/spinnerResponsavelPrisaoAutoria"
+                    android:layout_width="0dp"
+                    android:layout_height="46dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@color/colorSpinner"
+                    android:visibility="visible"
+                    android:imeOptions="actionNext"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvResponsavelPrisao" />
+
+
+            </android.support.constraint.ConstraintLayout>
+
+            <Button
+                android:id="@+id/btnIncluirFinalizarAutoria"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorBotao"
+                android:text="Concluir"
+                android:visibility="invisible"
+                android:imeOptions="actionNext"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btnIncluirAutoria"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerStatusAutoria" />
+
+            <EditText
+                android:id="@+id/edtNaturalidadeAutoria"
+                android:layout_width="144dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorEditext"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:visibility="invisible"
+                android:imeOptions="actionNext"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/spinnerNacionalidadeAutoria"
+                app:layout_constraintTop_toBottomOf="@+id/tvNaturalidadeAutoria" />
+
+            <Button
+                android:id="@+id/btnEstatusAutoria"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorBotao"
+                android:text="Condição da Autoria"
+                android:visibility="invisible"
+                android:imeOptions="actionNext"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtNaturalidadeAutoria" />
+
+            <TextView
+                android:id="@+id/tvVulgoAutoria"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="8dp"
+                android:text="Vulgo:"
+                android:textStyle="bold"
+                android:visibility="invisible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnQualificacaoAutoria" />
+
+            <EditText
+                android:id="@+id/edtVulgoAutoria"
+                android:layout_width="0dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorEditext"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvNomeAutoria" />
+
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>

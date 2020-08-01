@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBacground"
+    tools:context=".IncluirEqPresLocalActivity">
+
+    <TextView
+        android:id="@+id/tvEquipePresLocalNome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/nome"
+        android:textColorLink="@color/colorPrimary"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerCargoEquipPreservacaoLocal" />
+
+    <EditText
+        android:id="@+id/edtEqPresLocalNome"
+        android:layout_width="259dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorEditext"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColorLink="@color/colorPrimary"
+        android:imeOptions="actionNext"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvEquipePresLocalNome" />
+
+    <Button
+        android:id="@+id/btnIncluirEquipePreservacaoLocal"
+        android:layout_width="86dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorBotao"
+        android:text="Incluir Novo"
+        app:layout_constraintStart_toEndOf="@+id/edtEqPresLocalNome"
+        app:layout_constraintTop_toBottomOf="@+id/tvEquipePresLocalNome" />
+
+    <TextView
+        android:id="@+id/tvCargoEquipePresLocal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/cargo"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTituloIncluirPreservacaoLocal" />
+
+    <Spinner
+        android:id="@+id/spinnerCargoEquipPreservacaoLocal"
+        android:layout_width="138dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorSpinner"
+        android:imeOptions="actionNext"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCargoEquipePresLocal" />
+
+    <TextView
+        android:id="@+id/tvTituloIncluirPreservacaoLocal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="Cadastrar Equipe Presesrvação Local"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnIncluirEquipePreservacaoLocalFinalizar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@color/colorBotao"
+        android:text="concluir"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtEqPresLocalNome" />
+
+</android.support.constraint.ConstraintLayout>

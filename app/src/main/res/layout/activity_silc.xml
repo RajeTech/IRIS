@@ -1,0 +1,731 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBacground"
+    tools:context=".SilcActivity">
+
+    <ScrollView
+        android:id="@+id/scSilcDados"
+        android:layout_width="match_parent"
+        android:layout_height="511dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        android:clickable="true"
+        android:focusableInTouchMode="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/clSilcDados"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/edtDataSilc"
+                android:layout_width="0dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorEditext"
+                android:ems="10"
+                android:inputType="date"
+                android:visibility="invisible"
+                android:imeOptions="actionNext"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnDataSilc" />
+
+            <EditText
+                android:id="@+id/edthorarioSilc"
+                android:layout_width="0dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorEditext"
+                android:ems="10"
+                android:inputType="time"
+                android:visibility="invisible"
+                android:imeOptions="actionNext"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnHorarioSilc" />
+
+            <TextView
+                android:id="@+id/tvLogradouroSilc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/logradouro"
+                android:textStyle="bold"
+                android:visibility="invisible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnEnderecoSilc" />
+
+            <TextView
+                android:id="@+id/tvNumeroSilc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/numero"
+                android:textStyle="bold"
+                android:visibility="invisible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerLogradouroSilc" />
+
+            <TextView
+                android:id="@+id/tvReferenciaLocalSilc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/refer_ncia_do_local"
+                android:textStyle="bold"
+                android:visibility="invisible"
+                app:layout_constraintStart_toEndOf="@+id/tvNumeroSilc"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerLogradouroSilc" />
+
+            <TextView
+                android:id="@+id/tvBairroSilc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:text="@string/bairro"
+                android:textStyle="bold"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtNumeroRuaSilc" />
+
+            <TextView
+                android:id="@+id/tvMunicipioSilc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:text="@string/municipio"
+                android:textStyle="bold"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerDistVilPovoSilc" />
+
+            <TextView
+                android:id="@+id/tvDisVilPovoSilc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/distrito_vilarejo_povoado"
+                android:textStyle="bold"
+                android:visibility="invisible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtBairroSilc" />
+
+            <Spinner
+                android:id="@+id/spinnerLogradouroSilc"
+                android:layout_width="115dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/colorSpinner"
+                android:visibility="invisible"
+                android:imeOptions="actionNext"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvLogradouroSilc" />
+
+            <EditText
+                android:id="@+id/edtRuaSilc"
+                android:layout_width="217dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorEditext"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:visibility="invisible"
+                android:imeOptions="actionNext"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/spinnerLogradouroSilc"
+                app:layout_constraintTop_toBottomOf="@+id/tvLogradouroSilc" />
+
+            <EditText
+                android:id="@+id/edtNumeroRuaSilc"
+                android:layout_width="56dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/colorEditext"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:visibility="invisible"
+                android:imeOptions="actionNext"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvNumeroSilc" />
+
+            <EditText
+                android:id="@+id/edtReferenciaLocalSilc"
+                android:layout_width="276dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorEditext"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:visibility="invisible"
+                android:imeOptions="actionNext"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/edtNumeroRuaSilc"
+                app:layout_constraintTop_toBottomOf="@+id/tvReferenciaLocalSilc" />
+
+            <EditText
+                android:id="@+id/edtBairroSilc"
+                android:layout_width="0dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@color/colorEditext"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:visibility="invisible"
+                android:imeOptions="actionNext"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvBairroSilc" />
+
+            <Spinner
+                android:id="@+id/spinnerDistVilPovoSilc"
+                android:layout_width="123dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/colorSpinner"
+                android:visibility="invisible"
+                android:imeOptions="actionNext"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDisVilPovoSilc" />
+
+            <EditText
+                android:id="@+id/edtDisVilPovoSilc"
+                android:layout_width="207dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorEditext"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:visibility="invisible"
+                android:imeOptions="actionNext"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/spinnerDistVilPovoSilc"
+                app:layout_constraintTop_toBottomOf="@+id/tvDisVilPovoSilc" />
+
+            <EditText
+                android:id="@+id/edtMunicipioSilc"
+                android:layout_width="232dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/colorEditext"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:visibility="invisible"
+                android:imeOptions="actionNext"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvMunicipioSilc" />
+
+            <Spinner
+                android:id="@+id/spinnerEstadoSilc"
+                android:layout_width="89dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorSpinner"
+                android:visibility="invisible"
+                android:imeOptions="actionNext"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/edtMunicipioSilc"
+                app:layout_constraintTop_toBottomOf="@+id/tvMunicipioSilc" />
+
+            <Button
+                android:id="@+id/btnDataSilc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorBotao"
+                android:imeOptions="actionNext"
+                android:text="@string/data_do_silc"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rgSilc" />
+
+            <Button
+                android:id="@+id/btnHorarioSilc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorBotao"
+                android:text="@string/horario_do_silc"
+                android:visibility="invisible"
+                android:imeOptions="actionNext"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtDataSilc" />
+
+            <Button
+                android:id="@+id/btnEnderecoSilc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorBotao"
+                android:text="@string/endereco_do_silc"
+                android:visibility="invisible"
+                android:imeOptions="actionNext"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edthorarioSilc" />
+
+            <Button
+                android:id="@+id/btnEquipePeritosSilc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorBotao"
+                android:text="Equipe de peritos DPT"
+                android:visibility="invisible"
+                android:imeOptions="actionNext"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lvEquipeLevantamentoLocalSilc" />
+
+            <Button
+                android:id="@+id/btnEquipePreservacaolocalSilc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorBotao"
+                android:text="Equipe Preservação Local"
+                android:visibility="invisible"
+                android:imeOptions="actionNext"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtMunicipioSilc" />
+
+            <Button
+                android:id="@+id/btnEquipeLevantamentoSilc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorBotao"
+                android:text="Equipe do Levantamento"
+                android:visibility="invisible"
+                android:imeOptions="actionNext"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lvEquipePreservacaoLocalSilc" />
+
+            <Button
+                android:id="@+id/btnObjetosApreendidosSIlc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorBotao"
+                android:text="Instrumentos Objetos Arrecadados"
+                android:visibility="invisible"
+                android:imeOptions="actionNext"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lvEquipePeritoSilc" />
+
+            <Button
+                android:id="@+id/btnSalvarSIlc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/colorBotao"
+                android:text="Concluir"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lvObjetosApreendidos" />
+
+            <ListView
+                android:id="@+id/lvEquipePreservacaoLocalSilc"
+                android:layout_width="0dp"
+                android:layout_height="93dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorEditext"
+                android:visibility="invisible"
+                android:imeOptions="actionNext"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rgEquipePreservacaolocalSilc" />
+
+            <ListView
+                android:id="@+id/lvEquipeLevantamentoLocalSilc"
+                android:layout_width="0dp"
+                android:layout_height="90dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorEditext"
+                android:visibility="invisible"
+                android:imeOptions="actionNext"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rgEquipeLevantamentoSilc" />
+
+            <ListView
+                android:id="@+id/lvEquipePeritoSilc"
+                android:layout_width="0dp"
+                android:layout_height="141dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorEditext"
+                android:visibility="invisible"
+                android:imeOptions="actionNext"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rgEquipePeritoSilc" />
+
+            <ListView
+                android:id="@+id/lvObjetosApreendidos"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorEditext"
+                android:visibility="invisible"
+                android:imeOptions="actionNext"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rgObjetosApreendidos" />
+
+            <Button
+                android:id="@+id/btnImportarEnderecoFatoSilc"
+                android:layout_width="221dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorBotao"
+                android:text="Importar Endereço do Fato"
+                android:visibility="invisible"
+                android:imeOptions="actionNext"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/tvLogradouroSilc"
+                app:layout_constraintTop_toBottomOf="@+id/btnEnderecoSilc" />
+
+            <RadioGroup
+                android:id="@+id/rgEquipePreservacaolocalSilc"
+                android:layout_width="0dp"
+                android:layout_height="34dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnEquipePreservacaolocalSilc">
+
+                <RadioButton
+                    android:id="@+id/rbEquipePreservacaolocalIdentificadaSilc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="false"
+                    android:imeOptions="actionNext"
+                    android:text="Informado" />
+
+                <RadioButton
+                    android:id="@+id/rbEquipePreservacaolocalNIdenficadaSilc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="false"
+                    android:imeOptions="actionNext"
+                    android:text="Não Informado" />
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/rgEquipeLevantamentoSilc"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnEquipeLevantamentoSilc">
+
+                <RadioButton
+                    android:id="@+id/rbEquipeLevantamentoIdentificadoSilc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="false"
+                    android:imeOptions="actionNext"
+                    android:text="Informado" />
+
+                <RadioButton
+                    android:id="@+id/rbEquipeLevantamentoNIdentificadoSilc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="false"
+                    android:imeOptions="actionNext"
+                    android:text="Não Informado" />
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/rgEquipePeritoSilc"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnEquipePeritosSilc">
+
+                <RadioButton
+                    android:id="@+id/rbEquipePeritoIdentificadoSilc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:imeOptions="actionNext"
+                    android:text="Informado" />
+
+                <RadioButton
+                    android:id="@+id/rbEquipePeritoNIdentificadoSilc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:imeOptions="actionNext"
+                    android:text="Não Informado" />
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/rgObjetosApreendidos"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnObjetosApreendidosSIlc">
+
+                <RadioButton
+                    android:id="@+id/rbObjetosApreendidosIdentificado"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="false"
+                    android:imeOptions="actionNext"
+                    android:text="Relacionar" />
+
+                <RadioButton
+                    android:id="@+id/rbObjetosApreendidosNidentificado"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="false"
+                    android:imeOptions="actionNext"
+                    android:text="Não Houve" />
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/rgSilc"
+                android:layout_width="286dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtDelegadoResponsavel">
+
+                <RadioButton
+                    android:id="@+id/rbRealizadoSilc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="false"
+                    android:text="Realizado" />
+
+                <RadioButton
+                    android:id="@+id/rbNRealizadoSilc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="false"
+                    android:text="Não Realizado" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:text="Levantamento Cadavérico"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Autoridade Policial Responsável pelo Relatório"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@+id/textView21"
+                tools:layout_editor_absoluteX="8dp" />
+
+            <EditText
+                android:id="@+id/edtDelegadoResponsavel"
+                android:layout_width="0dp"
+                android:layout_height="46dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorEditext"
+                android:ems="10"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView30" />
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
